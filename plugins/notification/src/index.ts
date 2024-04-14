@@ -21,6 +21,7 @@ import {
   Doc,
   DocumentQuery,
   IdMap,
+  Markup,
   Mixin,
   Ref,
   Space,
@@ -244,7 +245,7 @@ export interface CommonInboxNotification extends InboxNotification {
   headerObjectId?: Ref<Doc>
   headerObjectClass?: Ref<Class<Doc>>
   message?: IntlString
-  messageHtml?: string
+  messageHtml?: Markup
   props?: Record<string, any>
   icon?: Asset
   iconProps?: Record<string, any>
@@ -381,11 +382,7 @@ const notification = plugin(notificationId, {
   icon: {
     Notifications: '' as Asset,
     Inbox: '' as Asset,
-    Track: '' as Asset,
-    DontTrack: '' as Asset,
-    Hide: '' as Asset,
-    ReadAll: '' as Asset,
-    UnreadAll: '' as Asset
+    BellCrossed: '' as Asset
   },
   space: {
     Notifications: '' as Ref<Space>
